@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Mono", monospace;
+}
+
+html{
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+.green{
+    color: #2a4038;
+}
+
+.fa-solid{
+    color: white;
+    font-size: 24px;
+    display: none;
+}
+
+/* NAv */
+
+ul{
+    display: flex;
+    
+}
+
+li{
+    color: white;
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    padding-left: 16px;
+    font-size: 16px;
+    cursor: crosshair;
+    transition: 300ms;
+}
+
+
+li::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #2a4038;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s ease;
+    width: 100%;
+}
+
+li:hover::after{
+    transform: scaleX(0);
+}
+
+li:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 12px;
+    animation: fade-in 1500ms backwards;
+    margin: 0 24px 64px 24px;
+    height: 20vh;
+   
+  }
+
+  .logo{
+    margin-top: 36px;
+    width: 280px;
+    filter: invert(1);
+  }
+
+  /* header */
+
+  .header{
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 48px;
+  }
+  
+
+  .header__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__left{
+    width: 50%;
+    margin-right: 48px;
+  }
+
+  .header__img{
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .header__right{
+    width: 50%;
+    margin-left: 48px;
+  }
+
+  .header__h1{
+    font-size: 36px;
+    color: white;
+    padding-bottom:16px ;
+  }
+
+  .header__p{
+    text-align:right;
+    color: white;
+  }
+
+  @media(max-width: 964px){
+    .fa-solid{
+        display: block;
+    }
+
+    ul{
+        display: none;
+    }
+  }
+
+  @media(max-width: 764px){
+  
+    .header__wrapper{
+flex-direction: column;
+display: flex;
+justify-content: center;
+align-items: center;
+    }
+
+    .header__left{
+      margin: 0;
+      }
+      .header__right{
+        margin: 0;
+        }
+
+        .header__h1{
+            text-align: center;
+            padding-top: 24px;
+        }
+        .header__p{
+        text-align:center;
+        }
+  }
