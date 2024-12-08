@@ -19,7 +19,7 @@ html{
 .fa-bars{
     color: white;
     font-size: 24px;
-    display: none !important;
+    display: none;
 }
 
 .hidden {
@@ -177,7 +177,6 @@ li:hover::after{
     font-size: 36px;
     color: white;
     padding-bottom:16px;
-    transform: translateY();
     animation: fade-up 2.5s ease-out forwards;
   }
 
@@ -217,7 +216,7 @@ align-items: center;
             text-align: center;
             padding-top: 24px;
             font-size: 24px;
-            animation: fade-up;
+            animation: fade-up 2s ease-out forwards;
 
         }
         .header__p{
